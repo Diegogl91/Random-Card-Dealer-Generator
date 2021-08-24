@@ -48,9 +48,9 @@ window.onload = function () {
 
 }
  ChangeCard();
-// window.setInterval(function(){
-//     ChangeCard();
-// }, 10000)
+ window.setInterval(function(){
+     ChangeCard();
+ }, 10000)
  };
 
 
