@@ -1,10 +1,15 @@
 window.onload = function () {
 
-    let number = document.getElementsByClassName('number')[0];
     
-    let num = Math.floor(Math.random() * 12);
-    let varpinta = Math.floor(Math.random() * 3) + 1;
+    let boton = document.getElementById('boton');
+    boton.addEventListener('click', function(){
+        ChangeCard();
+    });
 
+    ChangeCard = () =>{  
+    let number = document.getElementsByClassName('number')[0];
+    let num = Math.floor(Math.random() * 13);
+    let varpinta = Math.floor(Math.random() * 4)+1 ;
     let pinta = "";
     switch (varpinta) {
         case 1:
@@ -37,9 +42,15 @@ window.onload = function () {
     number.innerHTML = num;
 
     let card = document.getElementsByClassName('card')[0];
-    card.classList.add(pinta);
+   
+    card.classList = `card ${pinta}`;
 
 }
+ChangeCard();
+window.setInterval(function(){
+    ChangeCard();
+}, 10000)
+};
 
 
 
