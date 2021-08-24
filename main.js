@@ -8,7 +8,8 @@ window.onload = function () {
 
     ChangeCard = () =>{  
     let number = document.getElementsByClassName('number')[0];
-    let num = Math.floor(Math.random() * 13);
+    let num = Math.floor(Math.random() * 12)+1;
+    console.log(num);
     let varpinta = Math.floor(Math.random() * 4)+1 ;
     let pinta = "";
     switch (varpinta) {
@@ -26,7 +27,7 @@ window.onload = function () {
             break;
     }
     switch (num) {
-        case 0:
+        case 1:
             num = "A";
             break;
         case 10:
@@ -46,11 +47,11 @@ window.onload = function () {
     card.classList = `card ${pinta}`;
 
 }
-ChangeCard();
-window.setInterval(function(){
-    ChangeCard();
-}, 10000)
-};
+ ChangeCard();
+// window.setInterval(function(){
+//     ChangeCard();
+// }, 10000)
+ };
 
 
 
